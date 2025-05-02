@@ -1,11 +1,10 @@
-document.getElementById('add-task').addEventListener('click', function() {
-    const taskInput = document.getElementById('new-task');
-    const taskText = taskInput.value;
-    if (taskText) {
-        const taskList = document.getElementById('task-list');
-        const newTask = document.createElement('li');
-        newTask.textContent = taskText;
-        taskList.appendChild(newTask);
-        taskInput.value = '';
+function checkAnswer(button, answer) {
+    const feedback = button.parentElement.parentElement.querySelector('.feedback');
+    if (answer === 'correct') {
+        feedback.textContent = 'Correct!';
+        feedback.style.color = 'green';
+    } else {
+        feedback.textContent = 'Wrong!';
+        feedback.style.color = 'red';
     }
-});
+}
