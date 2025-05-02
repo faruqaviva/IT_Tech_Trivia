@@ -22,7 +22,7 @@ header {
     height: auto; /* Maintain aspect ratio */
 }
 
-.logo2 {
+.logo-left {
     position: absolute;
     top: 20px;
     left: 20px;
