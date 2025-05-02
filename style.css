@@ -11,6 +11,14 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
 }
 
 main {
