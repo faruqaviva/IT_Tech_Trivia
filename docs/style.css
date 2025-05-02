@@ -22,6 +22,14 @@ header {
     height: auto; /* Maintain aspect ratio */
 }
 
+.logo2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: auto;
+}
+
 main {
     padding: 20px;
 }
