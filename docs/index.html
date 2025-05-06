@@ -1,83 +1,138 @@
-body {
-    font-family: Aptos, sans-serif;
-    background-color: #FFFF00;
-    color: #000080;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-}
-
-.logo {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.logo-left {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-}
-
-main {
-    padding: 20px;
-}
-
-.question {
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 20px;
-}
-
-.question h3 {
-    margin-top: 0;
-}
-
-.question ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.question ul li {
-    margin-bottom: 10px;
-}
-
-.question ul li button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.question ul li button:hover {
-    background-color: #45a049;
-}
-
-.feedback {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-footer {
-    background-color: #4CAF50;
-    color: white;
-   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Tech Trivia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="https://cdn.freebiesupply.com/logos/large/2x/aviva-logo-png-transparent.png" alt="Aviva Logo" class="logo-left">
+        <h1>IT Tech Trivia</h1>
+        <p>Test your knowledge with fun tech trivia questions!</p>
+        <img src="https://cdn.freebiesupply.com/logos/large/2x/aviva-logo-png-transparent.png" alt="Aviva Logo" class="logo">
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Welcome to IT Tech Trivia!</h2>
+            < questions and see how much you know about the world of technology.</p>
+        </section>
+        <section class="question">
+            <h3>1.) When was JavaScript created?</h3>
+            <ul>
+                <li><button onclick="checkAnswer(this, 'wrong')">2005</button></li>
+                <li><button onclick="checkAnswer(this, 'correct')">2007</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">2009</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">2011</button></li>
+            </ul>
+            <p class="feedback"></p>
+        </section>
+                
+        <!-- Additional Questions -->
+        <section class="question">
+            <h3>2.) Who is known as the father of the World Wide Web?</h3>
+            <ul>
+                <li><button onclick="checkAnswer(this, 'wrong')">Bill Gates</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Steve Jobs</button></li>
+                <li><button onclick="checkAnswer(this, 'correct')">Tim Berners-Lee</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Mark Zuckerberg</button></li>
+            </ul>
+            <p class="feedback"></p>
+        </section>
+                
+        <section class="question">
+            <h3>3.) What does HTTP stand for?</h3>
+            <ul>
+                <li><button onclick="checkAnswer(this, 'correct')">HyperText Transfer Protocol</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">HyperText Transmission Protocol</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">HyperText Transfer Procedure</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">HyperText Transmission Procedure</button></li>
+            </ul>
+            <p class="feedback"></p>
+        </section>
+               
+        <section class="question">
+            <h3>4.) Which programming language is primarily used for web development?</h3>
+            <ul>
+                <li><button onclick="checkAnswer(this, 'wrong')">Python</button></li>
+                <li><button onclick="checkAnswer(this, 'correct')">JavaScript</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">C++</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Java</button></li>
+            </ul>
+            <p class="feedback"></p>
+        </section>
+             
+        <section class="question">
+            <h3>5.) What is the name of the first computer virus?</h3>
+            <ul>
+                <li><button onclick="checkAnswer(this, 'wrong')">ILOVEYOU</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Melissa</button></li>
+                <li><button onclick="checkAnswer(this, 'correct')">Creeper</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Mydoom</button></li>
+            </ul>
+            <p class="feedback"></p>
+        </section>
+             
+        <section class="question">
+            <h3>6.) Which company developed the Linux operating system?</h3>
+            <ul>
+                <li><button onclick="checkAnswer(this, 'wrong')">Microsoft</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Apple</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Google</button></li>
+                <li><button onclick="checkAnswer(this, 'correct')">Linus Torvalds</button></li>
+            </ul>
+            <p class="feedback"></p>
+        </section>
+              
+        <section class="question">
+            <h3>7.) What does CPU stand for?</h3>
+            <ul>
+                <li><button onclick="checkAnswer(this, 'correct')">Central Processing Unit</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Central Programming Unit</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Computer Processing Unit</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Computer Programming Unit</button></li>
+            </ul>
+            <p class="feedback"></p>
+        </section>
+               
+        <section class="question">
+            <h3>8.) Which company created the first smartphone?</h3>
+            <ul>
+                <li><button onclick="checkAnswer(this, 'wrong')">Apple</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Samsung</button></li>
+                <li><button onclick="checkAnswer(this, 'correct')">IBM</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Nokia</button></li>
+            </ul>
+            <p class="feedback"></p>
+        </section>
+                  
+        <section class="question">
+            <h3>9.) What does RAM stand for?</h3>
+            <ul>
+                <li><button onclick="checkAnswer(this, 'correct')">Random Access Memory</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Read Access Memory</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Run Access Memory</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Rapid Access Memory</button></li>
+            </ul>
+            <p class="feedback"></p>
+        </section>
+                 
+        <section class="question">
+            <h3>10.) Which programming language is known for its use in artificial intelligence?</h3>
+            <ul>
+                <li><button onclick="checkAnswer(this, 'wrong')">Java</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">C++</button></li>
+                <li><button onclick="checkAnswer(this, 'correct')">Python</button></li>
+                <li><button onclick="checkAnswer(this, 'wrong')">Ruby</button></li>
+            </ul>
+            <p class="feedback"></p>
+        </section>
+        <!-- More questions can be added here -->
+    </main>
+    <footer>
+        <p>&copy; Faruq Aloba - Aviva</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
